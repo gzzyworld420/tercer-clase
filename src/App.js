@@ -1,32 +1,22 @@
-import React from 'react';
-import Main from './componentes/Main/Main';
-// import Saludar from './componentes/Saludar/Saludar';
-import Navbar from './componentes/Navbar/Navbar';
-import Section from './componentes/Section/Section';
-import Subtitulo from './componentes/Subtitulo/Subtitulo';
-import Titulo from './componentes/Titulo/Titulo';
-import Footer from './componentes/Footer/Footer';
-import Subtitulo2 from './componentes/Subtitulo2/Subtitulo2';
-import ComponentCard from './componentes/ComponentCard/ComponentCard';
-
-
+import React from 'react'
+import Navbar from './components/Navbar/Navbar';
+import ContenedorCards from './components/ContenedorCards/ContenedorCards';
+import ContenedorCategorias from './components/ContenedorCategorias/ContenedorCategorias'
+import Characters from './components/Characters/Characters';
+import Footer from './components/Footer/Footer'
 function App() {
   return (
     <>
-    <Navbar/>
-    <Titulo/>
-
-    <Main/>
-
-    <Subtitulo/>
-
-    <Section/>
-
-    <Subtitulo2/>
-
-    <ComponentCard/>
-
-    <Footer/>
+      <Navbar/>
+      <h1>My App in React</h1>
+      <main>
+        <ContenedorCards />
+        <h2>Categories in database</h2>
+        <ContenedorCategorias />
+        <h3>Personajes de peliculas</h3>
+        <Characters />
+      </main>
+      <Footer />
     </>
   );
 }

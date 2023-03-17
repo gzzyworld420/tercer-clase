@@ -111,25 +111,10 @@ main {
 
 /* Cards */
 
-
-.container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    padding: 20px;   
-}
-
-.article{
-    width: 32%;
-    border-radius: 4px;
-    background-color: #fff;
-    padding: 10px 30px;
-    text-transform: capitalize;
+.characters{
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .character-card{
@@ -137,11 +122,13 @@ main {
     background-color: pink;
     padding: 20px;
     margin-bottom: 20px;
+    padding-right: 50px;
+    width: min-content;
 }
 
 .logo{
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: #fff;
     margin: 0 auto;
