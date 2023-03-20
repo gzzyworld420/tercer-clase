@@ -14,7 +14,7 @@ function Navbar(){
             {
                 opciones.map((opcion, idx) => 
                 <li key={opcion + idx}>
-                    {opcion}
+                    {opcion} 
                 </li>)
             }
         </ul>

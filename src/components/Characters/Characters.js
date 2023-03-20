@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import CardCharacters from "../CardCharacter/CardCharacter";
 const heroes = [
     {
@@ -42,13 +42,35 @@ const heroes = [
         descripcion: 'Superman es un hombre alto, musculoso, hombre de raza blanca con ojos azules y pelo negro corto con un rizo. Superman, siempre lleva su uniforme azul con su famoso rojo y amarillo escudo de S en el pecho, un cinturón amarillo, botas rojas y una capa roja.'
     },
 ]
+class Characters extends Component {
 
-function Characters(){
+    constructor(props){
+        super(props)
+        this.state = {
+            contador: 1
+        }
+    }
+
+    aumentar(){
+        this.setState({
+            contador: this.state.contador + 1
+        })
+    }
+
+    
+
+    render(){
     return(
         <div className="characters">
+
+            {/* <div>
+                <h1>Contador: {this.state.contador}</h1>
+            </div> */}
+
             {
                 heroes.map((heroe, idx)=> 
                 <CardCharacters
+                aumentarPadre = {() => this.aumentar()}
                     url={heroe.url}
                     nombre={heroe.nombre}
                     descripcion={heroe.descripcion}
@@ -58,6 +80,7 @@ function Characters(){
            
         </div>
     )
+        }
 }
 
 export default Characters
